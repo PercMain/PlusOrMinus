@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A59643D71F5A318200E36C91 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A59643D61F5A318200E36C91 /* main.cpp */; };
+		A59643E21F5A335500E36C91 /* SvgPacker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A59643E01F5A335500E36C91 /* SvgPacker.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,8 @@
 /* Begin PBXFileReference section */
 		A59643D31F5A318200E36C91 /* ConvoPlusOrMinus */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ConvoPlusOrMinus; sourceTree = BUILT_PRODUCTS_DIR; };
 		A59643D61F5A318200E36C91 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		A59643E01F5A335500E36C91 /* SvgPacker.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SvgPacker.cpp; path = ../SvgPacker.cpp; sourceTree = "<group>"; };
+		A59643E11F5A335500E36C91 /* SvgPacker.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = SvgPacker.hpp; path = ../SvgPacker.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +60,8 @@
 		A59643D51F5A318200E36C91 /* ConvoPlusOrMinus */ = {
 			isa = PBXGroup;
 			children = (
+				A59643E01F5A335500E36C91 /* SvgPacker.cpp */,
+				A59643E11F5A335500E36C91 /* SvgPacker.hpp */,
 				A59643D61F5A318200E36C91 /* main.cpp */,
 			);
 			path = ConvoPlusOrMinus;
@@ -118,6 +123,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A59643E21F5A335500E36C91 /* SvgPacker.cpp in Sources */,
 				A59643D71F5A318200E36C91 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
