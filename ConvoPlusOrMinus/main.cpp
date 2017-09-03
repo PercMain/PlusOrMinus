@@ -7,13 +7,27 @@
 //
 
 #include <iostream>
-#include "gc.hpp"
+#include "gcode.hpp"
 
-//using namespace std;
+gcode g;
+
+using namespace std;
 
 int main(int argc, const char * argv[]) {
     
-    cout << PI;
+    tool endMill;
+    endMill.number = 9;
+    endMill.heightOffsetNumber = 9;
+    endMill.width = 0.25;
+    endMill.length = 1.75;
+    endMill.guageLength = 4.25;
+    
+    
+    g.addToProgram(g.boilerPlate());
+    g.callAndSetTool(endMill);
+    
+    g.dispCurrentProgram();
+    
    
     return 0;
 }
