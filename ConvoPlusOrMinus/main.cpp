@@ -23,8 +23,23 @@ int main(int argc, const char * argv[]) {
     endMill.guageLength = 4.25;
     
     
-    g.addToProgram(g.boilerPlate());
+    g.boilerPlate();
     g.callAndSetTool(endMill);
+    g.rapidXY(1, 3.5);
+    g.rapidZ(0.1);
+    
+    g.addToProgram(g.viewCurrentPosition() + NEWLINE);
+    
+    g.setAbsOrInc(1);
+    
+    g.setFeedrate(20.0);
+    
+    g.moveXY(2, 2);
+    g.moveXY(5, NULL, 1);
+    
+    g.addToProgram(g.viewCurrentPosition() + NEWLINE);
+    
+    g.endProgram();
     
     g.dispCurrentProgram();
     

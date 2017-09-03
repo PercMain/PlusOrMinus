@@ -103,7 +103,6 @@ public:
     string TerFeedrate();
     
     
-    
     //Sets tool values into status register
     void setTool(tool t);
     //Runs setTool and outputs tool change into program
@@ -115,8 +114,45 @@ public:
     //Returns tool change command for current tool
     string callCurrentTool();
     
+    
+    //Movement commands
+    //Set absolute or incremental (0 for absolute)
+    void setAbsOrInc(int state = 0);
+    
+    //Sets Motion State (Rapids, feed, arc)
+    void setMotionState(int state);
+    
+    //Updates coordinate status
+    void updateX(double x);
+    void updateY(double y);
+    void updateZ(double z);
+    void updateA(double a);
+    void updateB(double b);
+    
+    //Calls Rapid in X and Y
+    void rapidXY(double x, double y, int vectorMode = 0);
+    
+    //Calls Rapid in Z
+    void rapidZ(double z);
+    
+    //Set feedrate
+    void setFeedrate(float feed, int whichFeed = 1);
+    
+    //Move at feed in X and Y
+    void moveXY(double x, double y, int vectorMode = 0);
+    
+    //Move at feed in Z
+    void moveZ(double z);
+    
+    
+    
+    
+    
     //Creates start of program boilerplate text
-    string boilerPlate();
+    void boilerPlate();
+    
+    //Calls program end code
+    void endProgram();
     
     //Adds string to current program for output
     void addToProgram(string command);
